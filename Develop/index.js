@@ -70,7 +70,7 @@ function writeToFile(fileName, data) {
 function init() {
     inquirer.prompt(questions).then((data) => {
         console.log(data)
-    fs.writeFile('GeneratedREADME.md', generateMarkdown(data),(err) => err? console.error(err) : console.log("Successfully created README.md!"))})
+    fs.writeFile('README.md', generateMarkdown(data),(err) => err? console.error(err) : console.log("Successfully created README.md!"))})
     }
 
 // Function call to initialize app

@@ -1,7 +1,7 @@
 # Readme Generator Challenge
 
 ## Description
-Building a Readme file that is generated from the command line using the 'node index.js' command to streamline the documentation process on future projects/challenges
+Creating a README file generator that is executable from the command line using 'node index.js' command to help streamline the documentation process for future projects and challenges
 
 ##Table of Contents
   1. [Installation](#installation)
@@ -15,22 +15,22 @@ Building a Readme file that is generated from the command line using the 'node i
   9. [Email](#email)
   
 ## Installation
-Nothing to add at this time
+nothing to add at this time for this challenge
 
 ## Features
-Nothing to add at this time
+The ability to execute from the command line will help streamline processes
 
 ## Contributing
-no further contributions needed
+no other contributors at his time
 
 ## Test
 undefined
 
 ## Usage
-readme file will be generated and uploaded to github for grading purposes
+Nothing to add at this time
 
 ## Credits
-no other collaborators to add at this time
+No collaborators to list on the challenge at this time
 
 ## Licenses
 MIT
