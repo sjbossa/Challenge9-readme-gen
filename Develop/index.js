@@ -2,7 +2,6 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const generateMarkdown = require("./utils/generateMarkdown.js");
-
 // TODO: Create an array of questions for user input
 const questions = [
     {
@@ -12,17 +11,17 @@ const questions = [
     },
     {
         type: "input",
-        name: "description"
+        name: "description",
         message: "Please provide a brief description of your project:",
     },
     {
         type: "input",
-        name: "installation"
+        name: "installation",
         message: "Please provide any steps required to install your project:",
     },
     {
         type: "input",
-        name: "features"
+        name: "features",
         message: "Please provide a list of any important features of your project:",
     },
     {
@@ -37,19 +36,19 @@ const questions = [
     },
     {
         type: "input",
-        name: "usage"
+        name: "usage",
         message: "Please provide any instructions and examples for your projects usage:",
     },
     {
         type: "input",
-        name: "credits"
+        name: "credits",
         message: "Please provide a list of collaborators on your project, if any, with links to their GitHub profiles:",
     },
     {
         type: "list",
         name: "licenses",
         message: "What type of license will you be using for your project?", 
-        choices: ["MIT", "Apache license 2.0", "General Public License v3.0", "The Unlicense", "None"]
+        choices: ["MIT", "Apache license 2.0", "General Public License v3.0", "None"]
     },
     {
         type: "input",
@@ -63,10 +62,16 @@ const questions = [
 }];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+    return fs.writeFileSync(path.join(process.cwd(),fileName),data);
+}
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    inquirer.prompt(questions).then((data) => {
+        console.log(data)
+    fs.writeFile('GeneratedREADME.md', generateMarkdown(data),(err) => err? console.error(err) : console.log("Successfully created README.md!"))})
+    }
 
 // Function call to initialize app
 init();
